@@ -31,6 +31,8 @@
   "rules": {
     "prettier/prettier": "error",
     "react/jsx-one-expression-per-line": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/prop-types": "off",
     "camelcase": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "react-hooks/rules-of-hooks": "error",
