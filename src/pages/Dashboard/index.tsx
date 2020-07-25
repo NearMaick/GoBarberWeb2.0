@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { FiPower, FiClock } from 'react-icons/fi';
 import {
@@ -9,13 +9,17 @@ import {
   Content,
   Schedule,
   NextAppoinntment,
+  Section,
   Calendar,
+  Appoitntment,
 } from './styles';
 
 import logoImg from '../../assets/logo.svg';
 import { useAuth } from '../../hooks/auth';
 
 const Dashboard: React.FC = () => {
+  const [selectedDate, setSelectedDate] = useState(new Date());
+
   const { signOut, user } = useAuth();
 
   return (
@@ -62,6 +66,61 @@ const Dashboard: React.FC = () => {
               </span>
             </div>
           </NextAppoinntment>
+
+          <Section>
+            <strong>Manhã</strong>
+
+            <Appoitntment>
+              <span>
+                <FiClock />
+                08:00
+              </span>
+
+              <div>
+                <img
+                  src="https://avatars2.githubusercontent.com/u/49838202?s=460&u=87f1bd097ae6a80491278dd8f6130e2dd2808723&v=4"
+                  alt="Maick Souza"
+                />
+
+                <strong>Maick Souza</strong>
+              </div>
+            </Appoitntment>
+
+            <Appoitntment>
+              <span>
+                <FiClock />
+                08:00
+              </span>
+
+              <div>
+                <img
+                  src="https://avatars2.githubusercontent.com/u/49838202?s=460&u=87f1bd097ae6a80491278dd8f6130e2dd2808723&v=4"
+                  alt="Maick Souza"
+                />
+
+                <strong>Maick Souza</strong>
+              </div>
+            </Appoitntment>
+          </Section>
+
+          <Section>
+            <strong>Tarde</strong>
+            <Appoitntment>
+              <span>
+                <FiClock />
+                08:00
+              </span>
+
+              <div>
+                <img
+                  src="https://avatars2.githubusercontent.com/u/49838202?s=460&u=87f1bd097ae6a80491278dd8f6130e2dd2808723&v=4"
+                  alt="Maick Souza"
+                />
+
+                <strong>Maick Souza</strong>
+              </div>
+            </Appoitntment>
+          </Section>
         </Schedule>
         <Calendar />
       </Content>
